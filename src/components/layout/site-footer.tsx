@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { navigation } from "@/data/navigation";
 
@@ -10,15 +11,14 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 lg:gap-12">
           
           <div className="lg:col-span-2 space-y-8">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="flex flex-col">
-                <span className="font-bold text-lg tracking-tight text-slate-900 leading-none">
-                  VINGYAN
-                </span>
-                <span className="tech-mono text-[9px] text-cyan-600 tracking-widest mt-1 font-semibold">
-                  TECHNO LABS
-                </span>
-              </div>
+            <Link href="/" className="flex items-center group">
+              <Image 
+                src="/vingyan-logo.png"
+                alt="Vingyan Techno Labs"
+                width={160}
+                height={48}
+                className="h-12 w-auto object-contain grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+              />
             </Link>
             <p className="text-slate-500 max-w-sm leading-relaxed">
               {siteConfig.description}

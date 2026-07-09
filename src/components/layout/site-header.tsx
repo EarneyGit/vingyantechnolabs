@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { navigation } from "@/data/navigation";
 import {
@@ -41,15 +42,15 @@ export function SiteHeader() {
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
           
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group relative">
-            <div className="flex flex-col">
-              <span className="font-bold text-lg tracking-tight text-slate-900 leading-none">
-                VINGYAN
-              </span>
-              <span className="tech-mono text-[9px] text-indigo-600 tracking-widest mt-1 font-semibold">
-                TECHNO LABS
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group relative">
+            <Image 
+              src="/vingyan-logo.png"
+              alt="Vingyan Techno Labs"
+              width={160}
+              height={48}
+              className="h-10 md:h-12 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
