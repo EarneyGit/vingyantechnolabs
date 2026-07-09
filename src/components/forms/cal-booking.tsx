@@ -32,11 +32,11 @@ export function CalBooking() {
       </div>
       
       {/* Bottom Panel: Calendar */}
-      <div className="p-4 sm:p-6 flex-1 w-full flex flex-col min-h-[500px]">
-        <div className="flex-1 w-full bg-slate-50/50 rounded-xl overflow-hidden border border-slate-100 relative">
+      <div className="p-4 sm:p-6 flex-1 w-full flex flex-col min-h-[650px] sm:min-h-[500px]">
+        <div className="flex-1 w-full bg-slate-50/50 rounded-xl overflow-y-auto border border-slate-100 relative">
           <Cal
             calLink="aphidsgroup-hx2agd/30min" 
-            style={{ width: "100%", height: "100%", overflow: "hidden", position: "absolute", inset: 0 }}
+            style={{ width: "100%", height: "100%", minHeight: "600px", overflow: "scroll" }}
             config={{ layout: "month_view", theme: "light" }}
           />
         </div>

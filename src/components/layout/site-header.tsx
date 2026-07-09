@@ -167,7 +167,7 @@ export function SiteHeader() {
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Toggle Menu</span>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white border-l border-slate-200 p-6">
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white border-l border-slate-200 p-6 overflow-y-auto">
                 <div className="flex flex-col space-y-6 mt-8">
                   {navigation.main.map((item) => (
                     <div key={item.title}>
