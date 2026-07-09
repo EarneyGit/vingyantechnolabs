@@ -14,7 +14,7 @@ export default function ContactPage() {
     <div className="relative min-h-screen bg-slate-50 overflow-hidden pt-24 pb-24">
       {/* Dynamic Background Split */}
       <div className="absolute top-0 left-0 w-full h-[30%] bg-slate-50 z-0" />
-      <div className="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-br from-indigo-600 via-violet-600 to-indigo-800 z-0" />
+      <div className="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-br from-accent-orange via-accent-yellow to-primary z-0" />
       
       {/* Optional mesh layer for the bottom purple area */}
       <div className="absolute bottom-0 left-0 w-full h-[70%] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent z-0 opacity-50" />
@@ -50,7 +50,7 @@ export default function ContactPage() {
                 <Mail className="w-4 h-4 text-white" />
               </div>
               <div className="text-left">
-                <div className="text-[10px] text-indigo-100 font-bold uppercase tracking-wider">Email</div>
+                <div className="text-[10px] text-white/80 font-bold uppercase tracking-wider">Email</div>
                 <div className="font-bold text-white text-sm">{siteConfig.contact.email}</div>
               </div>
             </a>
@@ -65,7 +65,7 @@ export default function ContactPage() {
                 <MessageCircle className="w-4 h-4 text-white" />
               </div>
               <div className="text-left">
-                <div className="text-[10px] text-indigo-100 font-bold uppercase tracking-wider">WhatsApp</div>
+                <div className="text-[10px] text-white/80 font-bold uppercase tracking-wider">WhatsApp</div>
                 <div className="font-bold text-white text-sm">{siteConfig.contact.phone}</div>
               </div>
             </a>

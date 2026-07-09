@@ -57,7 +57,7 @@ export default function IndustriesOverview() {
 
 function IndustryCard({ industry }: { industry: any }) {
   return (
-    <Card className="flex flex-col border-slate-200 shadow-sm hover:border-indigo-200 hover:shadow-md transition-all bg-white">
+    <Card className="flex flex-col border-slate-200 shadow-sm hover:border-accent-orange/50 hover:shadow-md transition-all bg-white">
       <CardHeader>
         <CardTitle className="text-2xl">{industry.title}</CardTitle>
         <CardDescription className="text-base text-slate-600 line-clamp-2">
@@ -68,14 +68,14 @@ function IndustryCard({ industry }: { industry: any }) {
         <ul className="space-y-3">
           {industry.capabilities.slice(0, 4).map((cap: string, i: number) => (
             <li key={i} className="flex items-start">
-              <CheckCircle2 className="h-5 w-5 text-indigo-600 mr-3 flex-shrink-0 mt-0.5" />
+              <CheckCircle2 className="h-5 w-5 text-accent-orange mr-3 flex-shrink-0 mt-0.5" />
               <span className="text-sm text-slate-700">{cap}</span>
             </li>
           ))}
         </ul>
       </CardContent>
       <CardFooter>
-        <Button asChild className="w-full bg-slate-100 text-slate-900 hover:bg-indigo-600 hover:text-white transition-colors">
+        <Button asChild className="w-full bg-slate-100 text-slate-900 hover:bg-primary hover:text-white transition-colors">
           <Link href={industry.slug}>
             View Solution Details <ArrowRight className="h-4 w-4 ml-2" />
           </Link>

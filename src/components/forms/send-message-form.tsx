@@ -94,25 +94,25 @@ export function SendMessageForm() {
 
   if (isSuccess) {
     return (
-      <div className="bg-white rounded-[2rem] shadow-xl shadow-indigo-900/10 overflow-hidden flex flex-col h-full items-center justify-center py-16 px-8 text-center min-h-[500px] w-full">
+      <div className="bg-white rounded-[2rem] shadow-xl shadow-accent-orange/10 overflow-hidden flex flex-col h-full items-center justify-center py-16 px-8 text-center min-h-[500px] w-full">
         <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6 border border-green-100">
           <CheckCircle2 className="h-10 w-10 text-green-600" />
         </div>
         <h3 className="text-2xl font-bold text-slate-900 mb-3">Message Received</h3>
         <p className="text-slate-600 mb-8 max-w-sm">Thank you for reaching out. Our engineering team will review your requirements and get back to you within 2 hours.</p>
-        <Button onClick={() => setIsSuccess(false)} variant="outline" className="border-indigo-200 text-indigo-700 hover:bg-indigo-50">Send Another Message</Button>
+        <Button onClick={() => setIsSuccess(false)} variant="outline" className="border-accent-orange/30 text-primary hover:bg-accent-orange/10">Send Another Message</Button>
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl shadow-indigo-900/10 flex flex-col h-full w-full border border-slate-100 relative">
+    <div className="bg-white rounded-2xl shadow-xl shadow-accent-orange/10 flex flex-col h-full w-full border border-slate-100 relative">
       
       {/* Top Panel: Info */}
       <div className="p-6 md:p-8 border-b border-slate-100 flex flex-col bg-slate-50/50">
         <div className="inline-flex items-center gap-2 mb-4">
-          <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
-          <span className="text-xs font-bold text-indigo-600 tracking-wider uppercase">Contact Us</span>
+          <div className="w-1.5 h-1.5 rounded-full bg-accent-orange animate-pulse" />
+          <span className="text-xs font-bold text-accent-orange tracking-wider uppercase">Contact Us</span>
         </div>
         <h2 className="text-2xl font-bold text-slate-900 mb-2">Send Us a Message</h2>
         <p className="text-sm text-slate-500 font-medium">
@@ -138,7 +138,7 @@ export function SendMessageForm() {
                   <FormItem>
                     <FormLabel className="text-xs font-bold text-slate-700">First Name <span className="text-red-500">*</span></FormLabel>
                     <FormControl>
-                      <Input placeholder="John" {...field} className="bg-slate-50 h-11 border-slate-200 focus-visible:ring-indigo-500 transition-colors" />
+                      <Input placeholder="John" {...field} className="bg-slate-50 h-11 border-slate-200 focus-visible:ring-accent-orange transition-colors" />
                     </FormControl>
                     <FormMessage className="text-xs" />
                   </FormItem>
@@ -151,7 +151,7 @@ export function SendMessageForm() {
                   <FormItem>
                     <FormLabel className="text-xs font-bold text-slate-700">Last Name <span className="text-red-500">*</span></FormLabel>
                     <FormControl>
-                      <Input placeholder="Doe" {...field} className="bg-slate-50 h-11 border-slate-200 focus-visible:ring-indigo-500 transition-colors" />
+                      <Input placeholder="Doe" {...field} className="bg-slate-50 h-11 border-slate-200 focus-visible:ring-accent-orange transition-colors" />
                     </FormControl>
                     <FormMessage className="text-xs" />
                   </FormItem>
@@ -167,7 +167,7 @@ export function SendMessageForm() {
                   <FormItem>
                     <FormLabel className="text-xs font-bold text-slate-700">Business Email <span className="text-red-500">*</span></FormLabel>
                     <FormControl>
-                      <Input placeholder="john@company.com" {...field} className="bg-slate-50 h-11 border-slate-200 focus-visible:ring-indigo-500 transition-colors" />
+                      <Input placeholder="john@company.com" {...field} className="bg-slate-50 h-11 border-slate-200 focus-visible:ring-accent-orange transition-colors" />
                     </FormControl>
                     <FormMessage className="text-xs" />
                   </FormItem>
@@ -185,7 +185,7 @@ export function SendMessageForm() {
                           <span className="text-xs font-bold">🇮🇳</span>
                           <span className="text-xs font-bold text-slate-600">+91</span>
                         </div>
-                        <Input placeholder="99999 99999" {...field} className="bg-slate-50 h-11 border-slate-200 pl-16 focus-visible:ring-indigo-500 transition-colors" />
+                        <Input placeholder="99999 99999" {...field} className="bg-slate-50 h-11 border-slate-200 pl-16 focus-visible:ring-accent-orange transition-colors" />
                       </div>
                     </FormControl>
                     <FormMessage className="text-xs" />
@@ -202,7 +202,7 @@ export function SendMessageForm() {
                   <FormItem>
                     <FormLabel className="text-xs font-bold text-slate-700">Company Name <span className="text-red-500">*</span></FormLabel>
                     <FormControl>
-                      <Input placeholder="Acme Corp" {...field} className="bg-slate-50 h-11 border-slate-200 focus-visible:ring-indigo-500 transition-colors" />
+                      <Input placeholder="Acme Corp" {...field} className="bg-slate-50 h-11 border-slate-200 focus-visible:ring-accent-orange transition-colors" />
                     </FormControl>
                     <FormMessage className="text-xs" />
                   </FormItem>
@@ -216,7 +216,7 @@ export function SendMessageForm() {
                     <FormLabel className="text-xs font-bold text-slate-700">Industry</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
-                        <SelectTrigger className="bg-slate-50 h-11 border-slate-200 focus:ring-indigo-500 transition-colors">
+                        <SelectTrigger className="bg-slate-50 h-11 border-slate-200 focus:ring-accent-orange transition-colors">
                           <SelectValue placeholder="Select industry" />
                         </SelectTrigger>
                       </FormControl>
@@ -243,7 +243,7 @@ export function SendMessageForm() {
                   <FormControl>
                     <Textarea 
                       placeholder="Tell us about your project..." 
-                      className="min-h-[100px] bg-slate-50 border-slate-200 resize-y focus-visible:ring-indigo-500 transition-colors"
+                      className="min-h-[100px] bg-slate-50 border-slate-200 resize-y focus-visible:ring-accent-orange transition-colors"
                       {...field} 
                     />
                   </FormControl>
@@ -253,7 +253,7 @@ export function SendMessageForm() {
             />
 
             <div className="pt-4 flex justify-end">
-              <Button type="submit" className="h-11 px-8 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-lg shadow-md shadow-indigo-600/20" disabled={isSubmitting}>
+              <Button type="submit" className="h-11 px-8 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg shadow-md shadow-primary/20" disabled={isSubmitting}>
                 {isSubmitting ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting...</> : "Submit"}
               </Button>
             </div>

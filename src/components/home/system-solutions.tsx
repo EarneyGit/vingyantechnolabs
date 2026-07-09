@@ -20,12 +20,12 @@ export function SystemSolutions() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 mb-24 items-start relative">
           
           <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 opacity-[0.15] pointer-events-none hidden lg:block">
-            <CircuitBoard className="w-[500px] h-[500px] text-indigo-500" />
+            <CircuitBoard className="w-[500px] h-[500px] text-accent-orange/80" />
           </div>
 
           <div className="lg:col-span-4 sticky top-24">
-            <div className="w-12 h-12 bg-indigo-50 border border-indigo-100 flex items-center justify-center rounded-xl mb-6 shadow-sm">
-              <Cpu className="h-6 w-6 text-indigo-600" />
+            <div className="w-12 h-12 bg-accent-orange/10 border border-accent-orange/20 flex items-center justify-center rounded-xl mb-6 shadow-sm">
+              <Cpu className="h-6 w-6 text-accent-orange" />
             </div>
             <h3 className="text-2xl font-bold text-slate-900 mb-4">IoT Integration Systems</h3>
             <p className="text-slate-600 mb-8 leading-relaxed">
@@ -58,8 +58,8 @@ export function SystemSolutions() {
           </div>
 
           <div className="lg:col-span-4 sticky top-24">
-            <div className="w-12 h-12 bg-violet-50 border border-violet-100 flex items-center justify-center rounded-xl mb-6 shadow-sm">
-              <BoxSelect className="h-6 w-6 text-violet-600" />
+            <div className="w-12 h-12 bg-accent-blue/10 border border-accent-blue/20 flex items-center justify-center rounded-xl mb-6 shadow-sm">
+              <BoxSelect className="h-6 w-6 text-accent-blue" />
             </div>
             <h3 className="text-2xl font-bold text-slate-900 mb-4">Computer Vision Systems</h3>
             <p className="text-slate-600 mb-8 leading-relaxed">
@@ -90,16 +90,16 @@ export function SystemSolutions() {
 function SystemCard({ title, system, output, href, accent }: { title: string, problem: string, system: string, output: string, href: string, accent: "indigo" | "violet" }) {
   const isIndigo = accent === "indigo";
   
-  const borderHover = isIndigo ? "hover:border-indigo-300" : "hover:border-violet-300";
-  const shadowHover = isIndigo ? "hover:shadow-indigo-500/10" : "hover:shadow-violet-500/10";
-  const textAccent = isIndigo ? "text-indigo-600" : "text-violet-600";
-  const textHover = isIndigo ? "group-hover:text-indigo-600" : "group-hover:text-violet-600";
-  const bgAccent = isIndigo ? "bg-indigo-50" : "bg-violet-50";
+  const borderHover = isIndigo ? "hover:border-accent-orange/50" : "hover:border-accent-blue/50";
+  const shadowHover = isIndigo ? "hover:shadow-accent-orange/10" : "hover:shadow-accent-blue/10";
+  const textAccent = isIndigo ? "text-accent-orange" : "text-accent-blue";
+  const textHover = isIndigo ? "group-hover:text-accent-orange" : "group-hover:text-accent-blue";
+  const bgAccent = isIndigo ? "bg-accent-orange/10" : "bg-accent-blue/10";
   
-  const headerBgHover = isIndigo ? "group-hover:bg-indigo-500" : "group-hover:bg-violet-500";
-  const boxBorderHover = isIndigo ? "group-hover:border-indigo-100" : "group-hover:border-violet-100";
-  const outputBgHover = isIndigo ? "group-hover:bg-indigo-50" : "group-hover:bg-violet-50";
-  const outputBorderHover = isIndigo ? "group-hover:border-indigo-200" : "group-hover:border-violet-200";
+  const headerBgHover = isIndigo ? "group-hover:bg-primary" : "group-hover:bg-accent-blue";
+  const boxBorderHover = isIndigo ? "group-hover:border-accent-orange/20" : "group-hover:border-accent-blue/20";
+  const outputBgHover = isIndigo ? "group-hover:bg-accent-orange/10" : "group-hover:bg-accent-blue/10";
+  const outputBorderHover = isIndigo ? "group-hover:border-accent-orange/30" : "group-hover:border-accent-blue/30";
   
   return (
     <Link href={href} className={`block p-6 bg-white border border-slate-200 rounded-2xl group ${borderHover} hover:shadow-xl ${shadowHover} transition-all duration-300 relative overflow-hidden`}>

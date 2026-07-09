@@ -5,7 +5,7 @@ import { navigation } from "@/data/navigation";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-white text-slate-600 py-20 border-t border-slate-200">
+    <footer className="bg-slate-50 text-slate-600 py-20 border-t border-slate-200">
       
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 lg:gap-12">
@@ -15,28 +15,28 @@ export function SiteFooter() {
               <Image 
                 src="/vingyan-logo.png"
                 alt="Vingyan Techno Labs"
-                width={160}
-                height={48}
-                className="h-12 w-auto object-contain grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                width={240}
+                height={72}
+                className="h-14 md:h-16 w-auto object-contain transition-all duration-300"
               />
             </Link>
-            <p className="text-slate-500 max-w-sm leading-relaxed">
+            <p className="text-slate-600 max-w-sm leading-relaxed">
               {siteConfig.description}
             </p>
             <div className="space-y-3 pt-4">
               <div className="flex items-center gap-3">
-                <span className="tech-mono text-[10px] text-slate-400 font-bold w-20">EMAIL</span>
-                <a href={`mailto:${siteConfig.contact.email}`} className="text-cyan-600 hover:text-cyan-700 text-sm font-medium transition-colors">
+                <span className="tech-mono text-[10px] text-slate-500 font-bold w-20">EMAIL</span>
+                <a href={`mailto:${siteConfig.contact.email}`} className="text-accent-orange hover:text-primary text-sm font-medium transition-colors">
                   {siteConfig.contact.email}
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <span className="tech-mono text-[10px] text-slate-400 font-bold w-20">PHONE</span>
-                <span className="text-slate-700 text-sm font-medium">{siteConfig.contact.phone}</span>
+                <span className="tech-mono text-[10px] text-slate-500 font-bold w-20">PHONE</span>
+                <span className="text-slate-900 text-sm font-medium">{siteConfig.contact.phone}</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="tech-mono text-[10px] text-slate-400 font-bold w-20 mt-0.5">LOCATION</span>
-                <span className="text-slate-700 text-sm max-w-[200px] leading-snug">{siteConfig.contact.location}</span>
+                <span className="tech-mono text-[10px] text-slate-500 font-bold w-20 mt-0.5">LOCATION</span>
+                <span className="text-slate-900 text-sm max-w-[200px] leading-snug">{siteConfig.contact.location}</span>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@ export function SiteFooter() {
             <ul className="space-y-4">
               {navigation.footer.iot.map((link) => (
                 <li key={link.title}>
-                  <Link href={link.href} className="text-slate-500 hover:text-cyan-600 transition-colors text-sm font-medium">
+                  <Link href={link.href} className="text-slate-600 hover:text-accent-green transition-colors text-sm font-medium">
                     {link.title}
                   </Link>
                 </li>
@@ -59,7 +59,7 @@ export function SiteFooter() {
             <ul className="space-y-4">
               {navigation.footer.cv.map((link) => (
                 <li key={link.title}>
-                  <Link href={link.href} className="text-slate-500 hover:text-teal-600 transition-colors text-sm font-medium">
+                  <Link href={link.href} className="text-slate-600 hover:text-accent-blue transition-colors text-sm font-medium">
                     {link.title}
                   </Link>
                 </li>
@@ -72,7 +72,7 @@ export function SiteFooter() {
             <ul className="space-y-4">
               {navigation.footer.company.map((link) => (
                 <li key={link.title}>
-                  <Link href={link.href} className="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">
+                  <Link href={link.href} className="text-slate-600 hover:text-slate-900 transition-colors text-sm font-medium">
                     {link.title}
                   </Link>
                 </li>

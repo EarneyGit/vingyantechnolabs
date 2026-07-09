@@ -11,7 +11,7 @@ export function IndustryStory() {
         <div className="text-center max-w-4xl mx-auto mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
             When operations become measurable, <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-orange to-accent-yellow">
               they become controllable.
             </span>
           </h2>
@@ -62,35 +62,35 @@ export function IndustryStory() {
           {/* Vingyan Enabled */}
           <div className="relative group">
             <VisionBoundingBox className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" label="OPTIMIZE" />
-            <div className="bg-white p-8 rounded-2xl border border-indigo-200 shadow-xl shadow-indigo-600/10 relative overflow-hidden z-10 transition-transform duration-500 group-hover:scale-[0.98]">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-50 rounded-full blur-[80px] pointer-events-none -z-10" />
-            <h3 className="tech-mono text-sm text-indigo-600 mb-6 font-bold tracking-widest border-b border-indigo-100 pb-4">
+            <div className="bg-white p-8 rounded-2xl border border-accent-orange/30 shadow-xl shadow-accent-orange/10 relative overflow-hidden z-10 transition-transform duration-500 group-hover:scale-[0.98]">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-accent-orange/10 rounded-full blur-[80px] pointer-events-none -z-10" />
+            <h3 className="tech-mono text-sm text-accent-orange mb-6 font-bold tracking-widest border-b border-accent-orange/20 pb-4">
               VINGYAN-ENABLED OPERATIONS
             </h3>
             <ul className="space-y-6">
               <li className="flex gap-4">
-                <CheckCircle2 className="h-6 w-6 text-indigo-600 flex-shrink-0" />
+                <CheckCircle2 className="h-6 w-6 text-accent-orange flex-shrink-0" />
                 <div>
                   <div className="font-bold text-slate-900">Live Dashboards</div>
                   <div className="text-sm text-slate-600 mt-1 font-medium">Continuous visibility into machine health, occupancy, and anomalies.</div>
                 </div>
               </li>
               <li className="flex gap-4">
-                <CheckCircle2 className="h-6 w-6 text-indigo-600 flex-shrink-0" />
+                <CheckCircle2 className="h-6 w-6 text-accent-orange flex-shrink-0" />
                 <div>
                   <div className="font-bold text-slate-900">Automated Alerts</div>
                   <div className="text-sm text-slate-600 mt-1 font-medium">Instant notifications routed to the right personnel the second an issue is detected.</div>
                 </div>
               </li>
               <li className="flex gap-4">
-                <CheckCircle2 className="h-6 w-6 text-indigo-600 flex-shrink-0" />
+                <CheckCircle2 className="h-6 w-6 text-accent-orange flex-shrink-0" />
                 <div>
                   <div className="font-bold text-slate-900">Connected Systems</div>
                   <div className="text-sm text-slate-600 mt-1 font-medium">Cameras talk to gates. Sensors talk to PLCs. Everything is unified.</div>
                 </div>
               </li>
               <li className="flex gap-4">
-                <CheckCircle2 className="h-6 w-6 text-indigo-600 flex-shrink-0" />
+                <CheckCircle2 className="h-6 w-6 text-accent-orange flex-shrink-0" />
                 <div>
                   <div className="font-bold text-slate-900">Data-Backed Decisions</div>
                   <div className="text-sm text-slate-600 mt-1 font-medium">Historical analytics reveal exactly where bottlenecks and losses are occurring.</div>

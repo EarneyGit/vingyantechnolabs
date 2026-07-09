@@ -36,6 +36,13 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
+  --color-accent-green: #28A840;
+  --color-accent-blue: #0272B2;
+  --color-accent-yellow: #FDAF02;
+  --color-accent-orange: #F94A19;
+  --color-charcoal: #333333;
+  --color-dark: #1F1F1F;
+
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
@@ -84,80 +91,79 @@
 }
 
 /*
-  Theming: MODERN TECH COMPANY (Indigo & Violet)
-  Background: crisp white / soft slate-50
-  Surface: white
-  Accent 1: deep indigo
-  Accent 2: vibrant violet
-  Accent 3: pink/fuchsia accents
+  Theming: VINGYAN SIGNAL CIRCUIT THEME
+  Background: soft off-white #F4F4F2
+  Surface: white #FFFFFF
+  Primary: brand orange #F94A19
+  Accents: signal green, vision blue, energy yellow
 */
 
 :root {
-  /* Default light theme uses crisp white surface and very dark slate typography */
-  --background: #FFFFFF;
-  --foreground: #09090B;
+  /* Default light theme uses soft off-white surface and charcoal typography */
+  --background: #F4F4F2;
+  --foreground: #333333;
   
   --card: #FFFFFF;
-  --card-foreground: #09090B;
+  --card-foreground: #333333;
   
   --popover: #FFFFFF;
-  --popover-foreground: #09090B;
+  --popover-foreground: #333333;
   
-  /* Primary is a deep, rich indigo */
-  --primary: #4F46E5;
+  /* Primary is Brand Orange */
+  --primary: #F94A19;
   --primary-foreground: #FFFFFF;
   
-  /* Secondary is a very soft slate */
-  --secondary: #F4F4F5;
-  --secondary-foreground: #18181B;
+  /* Secondary is muted */
+  --secondary: #E6E6E2;
+  --secondary-foreground: #333333;
   
-  --muted: #F4F4F5;
-  --muted-foreground: #71717A;
+  --muted: #E6E6E2;
+  --muted-foreground: #666666;
   
   /* Accents */
-  --accent: #F4F4F5;
-  --accent-foreground: #18181B;
+  --accent: #E6E6E2;
+  --accent-foreground: #333333;
   
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
   
-  --border: #E4E4E7;
-  --input: #E4E4E7;
-  --ring: #4F46E5;
+  --border: #E6E6E2;
+  --input: #E6E6E2;
+  --ring: #F94A19;
   
   --radius: 0.75rem;
 }
 
 .dark {
-  /* Dark theme for specialized components */
-  --background: #09090B;
-  --foreground: #FAFAFA;
+  /* Dark theme uses Deep Charcoal */
+  --background: #1F1F1F;
+  --foreground: #F4F4F2;
   
-  --card: #18181B;
-  --card-foreground: #FAFAFA;
+  --card: #333333;
+  --card-foreground: #F4F4F2;
   
-  --popover: #18181B;
-  --popover-foreground: #FAFAFA;
+  --popover: #333333;
+  --popover-foreground: #F4F4F2;
   
-  /* Primary is a vibrant violet/indigo in dark mode */
-  --primary: #6366F1;
+  /* Primary is Brand Orange */
+  --primary: #F94A19;
   --primary-foreground: #FFFFFF;
   
-  --secondary: #27272A;
-  --secondary-foreground: #FAFAFA;
+  --secondary: #333333;
+  --secondary-foreground: #F4F4F2;
   
-  --muted: #27272A;
+  --muted: #333333;
   --muted-foreground: #A1A1AA;
   
-  --accent: #27272A;
-  --accent-foreground: #FAFAFA;
+  --accent: #333333;
+  --accent-foreground: #F4F4F2;
   
   --destructive: #7F1D1D;
-  --destructive-foreground: #FAFAFA;
+  --destructive-foreground: #F4F4F2;
   
-  --border: #27272A;
-  --input: #27272A;
-  --ring: #6366F1;
+  --border: #333333;
+  --input: #333333;
+  --ring: #F94A19;
 }
 
 @layer base {
@@ -178,19 +184,19 @@
 @layer utilities {
   /* Signal Grid Background - Dark */
   .bg-signal-grid {
-    background-color: #0B1120;
+    background-color: #1F1F1F;
     background-image: 
-      linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+      linear-gradient(rgba(2, 114, 178, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(2, 114, 178, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
   }
   
   /* Signal Grid Background - Light */
   .bg-signal-grid-light {
-    background-color: #F8FAFC;
+    background-color: #F4F4F2;
     background-image: 
-      linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(51, 51, 51, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(51, 51, 51, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
@@ -207,7 +213,7 @@
     position: absolute;
     width: 16px;
     height: 16px;
-    border-color: #06B6D4;
+    border-color: var(--color-accent-blue);
     border-style: solid;
     pointer-events: none;
     z-index: 10;
@@ -227,8 +233,8 @@
   
   /* Variant for dark panels */
   .dark .vision-frame {
-    border-color: #1E293B;
-    background: #0F172A;
+    border-color: #333333;
+    background: #1F1F1F;
   }
 
   /* Technical Console Text */

@@ -13,18 +13,18 @@ export default function AboutPage() {
     <div className="bg-white">
       {/* Premium Light Hero */}
       <section className="bg-slate-50 text-slate-900 pt-32 pb-24 border-b border-slate-200 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-400/10 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute top-40 left-0 w-[600px] h-[600px] bg-violet-100/40 rounded-full blur-[140px] pointer-events-none -translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-orange/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-40 left-0 w-[600px] h-[600px] bg-accent-blue/10 rounded-full blur-[140px] pointer-events-none -translate-x-1/2" />
         
         <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded-full border border-indigo-200 bg-white tech-mono text-xs text-indigo-700 font-bold shadow-sm mx-auto">
-            <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded-full border border-accent-orange/30 bg-white tech-mono text-xs text-primary font-bold shadow-sm mx-auto">
+            <span className="w-2 h-2 rounded-full bg-accent-orange animate-pulse" />
             COMPANY_OVERVIEW
           </div>
           
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-slate-900 tracking-tight">
             Engineering Intelligent Systems for the <br className="hidden md:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-orange via-accent-yellow to-primary">
               Connected World
             </span>
           </h1>
@@ -39,8 +39,8 @@ export default function AboutPage() {
       {/* Mission */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center relative">
-          <div className="absolute inset-0 bg-indigo-50/50 rounded-full blur-[100px] -z-10" />
-          <h2 className="tech-mono text-xs font-bold text-indigo-600 uppercase tracking-widest mb-6">Our Mission</h2>
+          <div className="absolute inset-0 bg-accent-orange/10 rounded-full blur-[100px] -z-10" />
+          <h2 className="tech-mono text-xs font-bold text-accent-orange uppercase tracking-widest mb-6">Our Mission</h2>
           <p className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
             &quot;To help organizations convert physical operations into connected, intelligent, and measurable systems.&quot;
           </p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
       {/* Capabilities Overview */}
       <section className="py-24 bg-white border-y border-slate-200 relative overflow-hidden">
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-violet-100/40 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent-blue/10 rounded-full blur-[100px] pointer-events-none" />
         <div className="container mx-auto px-4 md:px-6 max-w-4xl relative z-10">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-12 text-center text-slate-900">Our Capabilities</h2>
           <div className="grid sm:grid-cols-2 gap-6">
@@ -107,7 +107,7 @@ export default function AboutPage() {
 
 function BeliefCard({ title, desc }: { title: string, desc: string }) {
   return (
-    <div className="p-8 bg-white rounded-2xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
+    <div className="p-8 bg-white rounded-2xl border border-slate-200 hover:border-accent-orange/50 hover:shadow-md transition-all">
       <h3 className="text-xl font-bold text-slate-900 mb-3">{title}</h3>
       <p className="text-slate-600 font-medium leading-relaxed">{desc}</p>
     </div>
@@ -117,7 +117,7 @@ function BeliefCard({ title, desc }: { title: string, desc: string }) {
 function CapabilityItem({ text }: { text: string }) {
   return (
     <div className="flex items-center space-x-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
-      <CheckCircle2 className="h-5 w-5 text-indigo-600 flex-shrink-0" />
+      <CheckCircle2 className="h-5 w-5 text-accent-orange flex-shrink-0" />
       <span className="font-medium text-slate-900">{text}</span>
     </div>
   );

@@ -49,11 +49,11 @@ function DynamicHeroVisual({ slug }: { slug: string }) {
   if (slug === "industry-4-0") {
     return (
       <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:flex flex-col items-center justify-center pointer-events-none opacity-80">
-         <div className="w-80 h-64 border border-indigo-200 rounded-2xl shadow-xl shadow-indigo-500/5 flex flex-col items-center justify-center gap-4 bg-white/50 backdrop-blur-sm">
-           <Activity className="h-16 w-16 text-indigo-600 animate-pulse" />
-           <div className="tech-mono text-indigo-700 font-bold text-sm">OEE: 94.2%</div>
+         <div className="w-80 h-64 border border-accent-orange/30 rounded-2xl shadow-xl shadow-accent-orange/10 flex flex-col items-center justify-center gap-4 bg-white/50 backdrop-blur-sm">
+           <Activity className="h-16 w-16 text-accent-orange animate-pulse" />
+           <div className="tech-mono text-primary font-bold text-sm">OEE: 94.2%</div>
            <div className="w-3/4 h-2 bg-slate-200 rounded-full overflow-hidden">
-             <div className="h-full bg-indigo-500 w-[94%]" />
+             <div className="h-full bg-accent-orange w-[94%]" />
            </div>
          </div>
       </div>
@@ -63,17 +63,17 @@ function DynamicHeroVisual({ slug }: { slug: string }) {
   if (slug === "manufacturing" || slug === "pharma") {
     return (
       <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:flex items-center justify-center pointer-events-none opacity-80">
-        <div className="w-96 h-72 border border-violet-200 rounded-2xl shadow-xl shadow-violet-500/5 bg-white/50 backdrop-blur-sm flex items-center justify-center relative overflow-hidden">
+        <div className="w-96 h-72 border border-accent-blue/30 rounded-2xl shadow-xl shadow-accent-blue/10 bg-white/50 backdrop-blur-sm flex items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5" />
-          <div className="w-48 h-48 border-2 border-dashed border-violet-300 flex flex-col justify-between p-2 relative z-10">
+          <div className="w-48 h-48 border-2 border-dashed border-accent-blue/50 flex flex-col justify-between p-2 relative z-10">
             <div className="flex justify-between w-full">
-              <span className="w-2 h-2 border-t-2 border-l-2 border-violet-600" />
-              <span className="w-2 h-2 border-t-2 border-r-2 border-violet-600" />
+              <span className="w-2 h-2 border-t-2 border-l-2 border-accent-blue" />
+              <span className="w-2 h-2 border-t-2 border-r-2 border-accent-blue" />
             </div>
-            <div className="text-center tech-mono text-violet-600 font-bold text-xs">SCAN_ACTIVE</div>
+            <div className="text-center tech-mono text-accent-blue font-bold text-xs">SCAN_ACTIVE</div>
             <div className="flex justify-between w-full">
-              <span className="w-2 h-2 border-b-2 border-l-2 border-violet-600" />
-              <span className="w-2 h-2 border-b-2 border-r-2 border-violet-600" />
+              <span className="w-2 h-2 border-b-2 border-l-2 border-accent-blue" />
+              <span className="w-2 h-2 border-b-2 border-r-2 border-accent-blue" />
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default async function IndustryDetailPage(props: { params: Promise<{ cate
     <div className="bg-white">
       
       <section className="bg-slate-50 text-slate-900 pt-32 pb-24 border-b border-slate-200 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-400/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-orange/10 rounded-full blur-[100px] pointer-events-none" />
         
         <DynamicHeroVisual slug={params.slug} />
 
@@ -112,29 +112,29 @@ export default async function IndustryDetailPage(props: { params: Promise<{ cate
           <Breadcrumb className="mb-10">
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink href="/" className="text-slate-500 hover:text-indigo-600 font-medium transition-colors">Core</BreadcrumbLink>
+                <BreadcrumbLink href="/" className="text-slate-500 hover:text-accent-orange font-medium transition-colors">Core</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator className="text-slate-400"><ChevronRight className="h-4 w-4" /></BreadcrumbSeparator>
               <BreadcrumbItem>
-                <BreadcrumbLink href="/industries" className="text-slate-500 hover:text-indigo-600 font-medium transition-colors">Systems</BreadcrumbLink>
+                <BreadcrumbLink href="/industries" className="text-slate-500 hover:text-accent-orange font-medium transition-colors">Systems</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator className="text-slate-400"><ChevronRight className="h-4 w-4" /></BreadcrumbSeparator>
               <BreadcrumbItem>
-                <BreadcrumbPage className="text-indigo-700 font-bold tech-mono text-xs">{industry.title.toUpperCase()}</BreadcrumbPage>
+                <BreadcrumbPage className="text-primary font-bold tech-mono text-xs">{industry.title.toUpperCase()}</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
 
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded-full border border-indigo-200 bg-white tech-mono text-xs text-indigo-700 font-bold shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded-full border border-accent-orange/30 bg-white tech-mono text-xs text-primary font-bold shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-accent-orange animate-pulse" />
               {isCV ? "COMPUTER_VISION_MODULE" : "IOT_SYSTEM_MODULE"}
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-slate-900">
               {industry.title}
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed mb-10 max-w-2xl font-medium">{industry.description}</p>
-            <Button asChild size="lg" className="bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white font-bold h-14 px-8 rounded-full shadow-lg shadow-indigo-600/25 hover:scale-[1.02] transition-all">
+            <Button asChild size="lg" className="bg-gradient-to-r from-accent-orange to-accent-yellow hover:from-primary hover:to-accent-orange text-white font-bold h-14 px-8 rounded-full shadow-lg shadow-primary/20 hover:scale-[1.02] transition-all">
               <Link href="/contact">Configure System <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
           </div>
@@ -152,8 +152,8 @@ export default async function IndustryDetailPage(props: { params: Promise<{ cate
               </p>
             </div>
             <div className="p-10 md:p-16 bg-slate-50 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-indigo-100/30 rounded-full blur-[80px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
-              <h2 className="tech-mono text-xs font-bold text-indigo-600 uppercase tracking-widest mb-6 relative z-10">Vingyan Architecture</h2>
+              <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent-orange/10 rounded-full blur-[80px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+              <h2 className="tech-mono text-xs font-bold text-accent-orange uppercase tracking-widest mb-6 relative z-10">Vingyan Architecture</h2>
               <p className="text-lg text-slate-700 leading-relaxed font-medium relative z-10">
                 {industry.solution}
               </p>
@@ -171,8 +171,8 @@ export default async function IndustryDetailPage(props: { params: Promise<{ cate
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {industry.capabilities.map((cap: string, i: number) => (
-              <div key={i} className="bg-white border border-slate-200 p-6 rounded-xl hover:border-indigo-300 hover:shadow-md transition-all">
-                <CheckCircle2 className="h-6 w-6 text-indigo-600 mb-4" />
+              <div key={i} className="bg-white border border-slate-200 p-6 rounded-xl hover:border-accent-orange/50 hover:shadow-md transition-all">
+                <CheckCircle2 className="h-6 w-6 text-accent-orange mb-4" />
                 <h3 className="font-bold text-slate-900 text-base leading-snug">{cap}</h3>
               </div>
             ))}
@@ -189,34 +189,34 @@ export default async function IndustryDetailPage(props: { params: Promise<{ cate
           </div>
           
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-8 border border-slate-200 rounded-2xl shadow-sm flex-1 w-full flex flex-col items-start relative overflow-hidden group hover:border-indigo-300 hover:shadow-md transition-all">
-              <div className="p-3 bg-slate-100 rounded-xl mb-6 group-hover:bg-indigo-50 transition-colors">
-                <Server className="h-6 w-6 text-slate-600 group-hover:text-indigo-600 transition-colors" />
+            <div className="bg-white p-8 border border-slate-200 rounded-2xl shadow-sm flex-1 w-full flex flex-col items-start relative overflow-hidden group hover:border-accent-orange/50 hover:shadow-md transition-all">
+              <div className="p-3 bg-slate-100 rounded-xl mb-6 group-hover:bg-accent-orange/10 transition-colors">
+                <Server className="h-6 w-6 text-slate-600 group-hover:text-accent-orange transition-colors" />
               </div>
               <div className="font-bold text-slate-900 mb-1">{isCV ? "Camera Feeds" : "Sensors & PLCs"}</div>
               <div className="text-xs text-slate-500 font-bold tech-mono">1. DATA_CAPTURE</div>
             </div>
             
-            <ArrowRight className="hidden md:block h-6 w-6 text-indigo-500 flex-shrink-0" />
-            <ArrowDown className="md:hidden h-6 w-6 text-indigo-500 flex-shrink-0" />
+            <ArrowRight className="hidden md:block h-6 w-6 text-accent-orange flex-shrink-0" />
+            <ArrowDown className="md:hidden h-6 w-6 text-accent-orange flex-shrink-0" />
             
-            <div className="bg-white p-8 border border-slate-200 rounded-2xl shadow-sm flex-1 w-full flex flex-col items-start relative overflow-hidden group hover:border-indigo-300 hover:shadow-md transition-all">
-              <div className="p-3 bg-indigo-50 border border-indigo-100 rounded-xl mb-6">
-                <Activity className="h-6 w-6 text-indigo-600" />
+            <div className="bg-white p-8 border border-slate-200 rounded-2xl shadow-sm flex-1 w-full flex flex-col items-start relative overflow-hidden group hover:border-primary/50 hover:shadow-md transition-all">
+              <div className="p-3 bg-accent-orange/10 border border-accent-orange/20 rounded-xl mb-6">
+                <Activity className="h-6 w-6 text-accent-orange" />
               </div>
               <div className="font-bold text-slate-900 mb-1">Edge Computing</div>
-              <div className="text-xs text-indigo-600 font-bold tech-mono">2. LOCAL_PROCESSING</div>
+              <div className="text-xs text-accent-orange font-bold tech-mono">2. LOCAL_PROCESSING</div>
             </div>
 
-            <ArrowRight className="hidden md:block h-6 w-6 text-indigo-500 flex-shrink-0" />
-            <ArrowDown className="md:hidden h-6 w-6 text-indigo-500 flex-shrink-0" />
+            <ArrowRight className="hidden md:block h-6 w-6 text-accent-orange flex-shrink-0" />
+            <ArrowDown className="md:hidden h-6 w-6 text-accent-orange flex-shrink-0" />
             
-            <div className="bg-white p-8 border border-slate-200 rounded-2xl shadow-sm flex-1 w-full flex flex-col items-start relative overflow-hidden group hover:border-violet-300 hover:shadow-md transition-all">
-              <div className="p-3 bg-violet-50 border border-violet-100 rounded-xl mb-6">
-                <MonitorPlay className="h-6 w-6 text-violet-600" />
+            <div className="bg-white p-8 border border-slate-200 rounded-2xl shadow-sm flex-1 w-full flex flex-col items-start relative overflow-hidden group hover:border-accent-blue/50 hover:shadow-md transition-all">
+              <div className="p-3 bg-accent-blue/10 border border-accent-blue/20 rounded-xl mb-6">
+                <MonitorPlay className="h-6 w-6 text-accent-blue" />
               </div>
               <div className="font-bold text-slate-900 mb-1">Command Dashboard</div>
-              <div className="text-xs text-violet-600 font-bold tech-mono">3. ALERTS_&_ANALYTICS</div>
+              <div className="text-xs text-accent-blue font-bold tech-mono">3. ALERTS_&_ANALYTICS</div>
             </div>
           </div>
         </div>
@@ -231,8 +231,8 @@ export default async function IndustryDetailPage(props: { params: Promise<{ cate
               <div className="space-y-6">
                 {industry.useCases.map((uc: {title: string; description: string}, i: number) => (
                   <div key={i} className="flex gap-4 border-b border-slate-200 pb-6 last:border-0">
-                    <div className="w-10 h-10 rounded-xl border border-indigo-100 bg-indigo-50 flex items-center justify-center flex-shrink-0 shadow-sm">
-                      <span className="tech-mono text-xs font-bold text-indigo-700">0{i + 1}</span>
+                    <div className="w-10 h-10 rounded-xl border border-accent-orange/20 bg-accent-orange/10 flex items-center justify-center flex-shrink-0 shadow-sm">
+                      <span className="tech-mono text-xs font-bold text-primary">0{i + 1}</span>
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900 text-lg mb-2">{uc.title}</h4>
@@ -249,7 +249,7 @@ export default async function IndustryDetailPage(props: { params: Promise<{ cate
                 <ul className="space-y-6">
                   {industry.benefits.map((benefit: string, i: number) => (
                     <li key={i} className="flex items-start">
-                      <CheckCircle2 className="h-6 w-6 text-indigo-600 mr-4 flex-shrink-0" />
+                      <CheckCircle2 className="h-6 w-6 text-accent-orange mr-4 flex-shrink-0" />
                       <span className="font-bold text-slate-700 leading-relaxed">{benefit}</span>
                     </li>
                   ))}

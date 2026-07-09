@@ -46,9 +46,9 @@ export function SiteHeader() {
             <Image 
               src="/vingyan-logo.png"
               alt="Vingyan Techno Labs"
-              width={160}
-              height={48}
-              className="h-10 md:h-12 w-auto object-contain"
+              width={240}
+              height={72}
+              className="h-14 md:h-16 w-auto object-contain"
               priority
             />
           </Link>
@@ -70,10 +70,10 @@ export function SiteHeader() {
                             {/* Left Panel: IoT */}
                             <div className="w-1/2 p-8 border-r border-slate-100 relative group/panel bg-slate-50">
                               <div className="flex items-center gap-3 mb-6 relative z-10">
-                                <div className="p-2 bg-cyan-50 rounded-lg border border-cyan-100">
-                                  <Cpu className="h-5 w-5 text-indigo-600" />
+                                <div className="p-2 bg-accent-green/10 rounded-lg border border-accent-green/20">
+                                  <Cpu className="h-5 w-5 text-accent-green" />
                                 </div>
-                                <h4 className="font-bold text-sm text-slate-900">
+                                <h4 className="font-bold text-sm text-charcoal">
                                   IoT Systems
                                 </h4>
                               </div>
@@ -83,10 +83,10 @@ export function SiteHeader() {
                                     <NavigationMenuLink render={<Link href={link.href} />}>
                                       <div className="block p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all duration-300 group/link cursor-pointer border border-transparent hover:border-slate-200">
                                         <div className="flex items-center justify-between">
-                                          <div className="font-semibold text-slate-800 group-hover/link:text-indigo-600 transition-colors">
+                                          <div className="font-semibold text-slate-800 group-hover/link:text-accent-green transition-colors">
                                             {link.title}
                                           </div>
-                                          <ChevronRight className="h-4 w-4 text-indigo-500 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
+                                          <ChevronRight className="h-4 w-4 text-accent-green opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
                                         </div>
                                         <p className="text-xs text-slate-500 mt-1 line-clamp-1">
                                           {link.description}
@@ -101,10 +101,10 @@ export function SiteHeader() {
                             {/* Right Panel: CV */}
                             <div className="w-1/2 p-8 relative group/panel bg-white">
                               <div className="flex items-center gap-3 mb-6 relative z-10">
-                                <div className="p-2 bg-teal-50 rounded-lg border border-teal-100">
-                                  <BoxSelect className="h-5 w-5 text-violet-600" />
+                                <div className="p-2 bg-accent-blue/10 rounded-lg border border-accent-blue/20">
+                                  <BoxSelect className="h-5 w-5 text-accent-blue" />
                                 </div>
-                                <h4 className="font-bold text-sm text-slate-900">
+                                <h4 className="font-bold text-sm text-charcoal">
                                   Computer Vision
                                 </h4>
                               </div>
@@ -114,10 +114,10 @@ export function SiteHeader() {
                                     <NavigationMenuLink render={<Link href={link.href} />}>
                                       <div className="block p-3 rounded-xl hover:bg-slate-50 transition-all duration-300 group/link cursor-pointer border border-transparent hover:border-slate-100">
                                         <div className="flex items-center justify-between">
-                                          <div className="font-semibold text-slate-800 group-hover/link:text-violet-600 transition-colors">
+                                          <div className="font-semibold text-slate-800 group-hover/link:text-accent-blue transition-colors">
                                             {link.title}
                                           </div>
-                                          <ChevronRight className="h-4 w-4 text-violet-500 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
+                                          <ChevronRight className="h-4 w-4 text-accent-blue opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
                                         </div>
                                         <p className="text-xs text-slate-500 mt-1 line-clamp-1">
                                           {link.description}
@@ -150,7 +150,7 @@ export function SiteHeader() {
             </NavigationMenu>
 
             {/* Premium CTA Button */}
-            <Button asChild className="relative overflow-hidden group bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-full px-8 h-10 font-bold transition-all duration-300 shadow-lg shadow-indigo-600/25 border border-indigo-500/50">
+            <Button asChild className="relative overflow-hidden group bg-gradient-to-r from-accent-orange to-accent-yellow hover:from-primary hover:to-accent-orange text-white rounded-full px-8 h-10 font-bold transition-all duration-300 shadow-lg shadow-accent-orange/25 border border-accent-orange/50">
               <Link href="/contact">
                 <span className="relative z-10 flex items-center">
                   Book a Demo
@@ -177,14 +177,14 @@ export function SiteHeader() {
                           <h4 className="font-bold text-lg text-slate-900 border-b border-slate-100 pb-2">{item.title}</h4>
                           {item.items.map((group) => (
                             <div key={group.group} className="space-y-2 pl-4">
-                              <h5 className="font-semibold text-xs text-indigo-600 uppercase tracking-widest mt-6 mb-3 tech-mono">
+                              <h5 className="font-semibold text-xs text-accent-orange uppercase tracking-widest mt-6 mb-3 tech-mono">
                                 {group.group}
                               </h5>
                               {group.links.map((link) => (
                                 <Link
                                   key={link.title}
                                   href={link.href}
-                                  className="block py-2 text-slate-600 hover:text-indigo-600 transition-colors font-medium"
+                                  className="block py-2 text-slate-600 hover:text-accent-orange transition-colors font-medium"
                                 >
                                   {link.title}
                                 </Link>
@@ -195,7 +195,7 @@ export function SiteHeader() {
                       ) : (
                         <Link
                           href={item.href}
-                          className="block font-bold text-lg text-slate-900 hover:text-indigo-600 border-b border-slate-100 pb-2 transition-colors"
+                          className="block font-bold text-lg text-slate-900 hover:text-accent-orange border-b border-slate-100 pb-2 transition-colors"
                         >
                           {item.title}
                         </Link>
@@ -203,7 +203,7 @@ export function SiteHeader() {
                     </div>
                   ))}
                   <div className="pt-8">
-                    <Button asChild className="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white font-bold h-12 rounded-full shadow-lg shadow-indigo-600/25">
+                    <Button asChild className="w-full bg-gradient-to-r from-accent-orange to-accent-yellow hover:from-primary hover:to-accent-orange text-white font-bold h-12 rounded-full shadow-lg shadow-accent-orange/25">
                       <Link href="/contact">Book a Demo</Link>
                     </Button>
                   </div>

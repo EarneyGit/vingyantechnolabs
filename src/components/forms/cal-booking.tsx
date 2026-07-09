@@ -8,7 +8,7 @@ export function CalBooking() {
     (async function () {
       const cal = await getCalApi();
       cal("ui", {
-        styles: { branding: { brandColor: "#4f46e5" } }, // Indigo 600
+        styles: { branding: { brandColor: "#F94A19" } }, // Brand Orange
         hideEventTypeDetails: false,
         layout: "month_view",
         theme: "light"
@@ -17,13 +17,13 @@ export function CalBooking() {
   }, []);
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl shadow-indigo-900/10 flex flex-col h-full w-full border border-slate-100 relative">
+    <div className="bg-white rounded-2xl shadow-xl shadow-accent-orange/10 flex flex-col h-full w-full border border-slate-100 relative">
       
       {/* Top Panel: Info */}
       <div className="p-6 md:p-8 border-b border-slate-100 flex flex-col bg-slate-50/50">
         <div className="inline-flex items-center gap-2 mb-4">
-          <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
-          <span className="text-xs font-bold text-indigo-600 tracking-wider uppercase">Book a Meeting</span>
+          <div className="w-1.5 h-1.5 rounded-full bg-accent-orange animate-pulse" />
+          <span className="text-xs font-bold text-accent-orange tracking-wider uppercase">Book a Meeting</span>
         </div>
         <h2 className="text-2xl font-bold text-slate-900 mb-2">Schedule a Live Demo</h2>
         <p className="text-sm text-slate-500 font-medium">
